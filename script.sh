@@ -1,5 +1,5 @@
 
-N=1000
+N=500
 
 for i in $(seq 1 1 $N); do
    printf "$i,"
