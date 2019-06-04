@@ -1,6 +1,7 @@
 
+N=1000
 
-for i in $(seq 1000 100000 1000); do
-   echo $i
-   ./covertime 100000 $i 10000
+for i in $(seq 1 1 $N); do
+   printf "$i,"
+   ./covertime $N $i 100000
 done;
