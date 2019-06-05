@@ -1,7 +1,9 @@
 
-N=500
+fname="vals_$1_$2"
 
-for i in $(seq 1 1 $N); do
-   printf "$i,"
-   ./covertime $N $i 100000
+touch $fname
+printf "R,T\n" > $fname
+for i in $(seq 1 1 $1); do
+   printf "$i," >> $fname
+   ./covertime $1 $i $2 >> $fname
 done;
